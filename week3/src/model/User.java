@@ -10,7 +10,6 @@ public class User {
     private String phoneNumber;
 
     public User() {}
-
     public User(String username, String password, String email, String phoneNumber) {
         this.id = UUID.randomUUID().toString();
         this.username = username;
