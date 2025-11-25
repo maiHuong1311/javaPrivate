@@ -9,6 +9,7 @@ import model.Tester;
 import serviceimpl.IEmployeeServiceImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -34,7 +35,7 @@ public class Main {
                     else {
                         System.out.println(Common.INFO_EMPLOYEE);
                         for(Employee employee : employees) {
-                            employee.toString();
+                            System.out.println(employee.toString());
                         }
                     }
                     break;
@@ -51,6 +52,20 @@ public class Main {
                 case 3:
                     System.out.print(Common.ENTER_NAME);
                     String name = sc.nextLine();
+                    if(e.getEmployeeByName(name).isEmpty())
+                        System.out.println(ErrorMessage.LIST_IS_EMTPY);
+                    else {
+                        System.out.println(Common.INFO_EMPLOYEE);
+                        List<Employee> result = e.getEmployeeByName(name);
+                        for(Employee employee : result)
+                            System.out.println(employee.toString());
+                    }
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println(ErrorMessage.INVALID_CHOICE);
+                    break;
             }
         }
     }
