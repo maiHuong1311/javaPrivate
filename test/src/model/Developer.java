@@ -26,7 +26,7 @@ public class Developer extends Employee implements IDebuggable {
         return  super.toString() +
                 "Developer{" +
                 "overtimeHours=" + overtimeHours +
-                '}';
+                "}}";
     }
 
     @Override

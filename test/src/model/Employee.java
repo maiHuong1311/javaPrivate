@@ -72,7 +72,6 @@ public abstract class Employee {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", basicSalary=" + basicSalary +
-                ", device=" + device +
-                '}';
+                ", device=" + device;
     }
 }
